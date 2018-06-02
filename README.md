@@ -5,7 +5,7 @@ JavaScript library that wraps the W3C standard Web Components family of APIs to 
 Smart Custom Element provides a set of useful API, Data Binding, Templates, Device Agnostic Event Handling, Resize handling, Style Change Notifications, Property and Attribute Change Notifications, Property Value and Type validation, Localization, Lifecycle callback functions and much more. Our framework allows you to easily build Custom HTML Elements. Custom Elements are the web platform's native solution for component-based development. With Custom Elements, you get reusable HTML tags that can be used just like the browser’s built-in native html elements, or break your app up into small pieces, making your code cleaner and easier to maintain.
 
 ## Installation
-- `npm install smart-custom-element --save
+- `npm install smart-custom-element --save`
 
 In your web page, include `<script src="smart.element.js"></script>`
 
