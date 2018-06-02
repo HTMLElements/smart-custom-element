@@ -1,0 +1,52 @@
+{
+  "name": "@smarthtmlelements/smart-custom-element",
+  "version": "1.0.0",
+  "description": "Smart Custom Element",
+   "scripts": { 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HTMLElements/smart-custom-element.git"
+  },
+  "author": "Smart HTML Elements",
+  "license": "SEE LICENSE IN https://www.htmlelements.com/pricing/",
+  "bugs": {
+    "url": "https://github.com/HTMLElements/smart-custom-element"
+  },
+  "homepage": "https://github.com/HTMLElements/smart-custom-element#readme",
+  "devDependencies": {
+ 
+  },
+  "dependencies": {
+    "@webcomponents/webcomponentsjs": "^1.0.22",
+     "@smarthtmlelements/smart-core": "^1.0.1"
+  },
+  "main": "index.js",
+  "directories": {},
+  "keywords": [
+	"custom",
+	"element",
+	"custom element",
+	"html element",
+	"web components",
+	"javascript",
+	"html elements",
+	"html tags",
+	"custom elements",
+	"custom elements v1",
+	"smart custom element",
+	"custom-elements",
+ 	"webcomponents",
+  "custom elements framework",
+  "html templates",
+  "shadow dowm",
+  "event handling",
+  "data binding",
+  "property change notifications",
+  "localization",
+  "javascript framework",
+  "agnostic events handling",
+  "declarative data binding",
+  "user interface components"
+  ]
+}
