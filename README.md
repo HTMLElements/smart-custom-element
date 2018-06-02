@@ -37,7 +37,7 @@ You also take advantage of features like lazy-loading, that allows for loading c
 A basic element definition looks like this:
 
 ```javascript
-JQX('smart-test', class TestElement extends Smart.BaseElement {
+Smart('smart-test', class TestElement extends Smart.BaseElement {
         // properties.
         static get properties() {
             return {
