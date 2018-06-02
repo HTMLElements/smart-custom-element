@@ -1,0 +1,25 @@
+{
+  "name": "smart-custom-element",
+  "authors": [
+    "jQWidgets Ltd"
+  ],
+  "description": "Smart Custom Element is a Javascript library for Custom Elements development",
+  "license": "Apache-2.0",
+  "keywords": [
+    "smart element",
+    "custom elements",
+    "web components",
+    "html elements"
+  ],
+  "main": "",
+  "ignore": [
+    "**/.*",
+    "**/node_modules",
+    "**/bower_components",
+    "**/tests"
+  ],
+  "dependencies": {
+    "webcomponentsjs": "^1.0.0",
+    "smart-core": "HTMLElements/smart-core"
+  }
+}
