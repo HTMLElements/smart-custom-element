@@ -33,7 +33,36 @@ Include HTML tag (e.g. ```<my-button id='button'></my-button>)``` in any time of
 You also take advantage of features like lazy-loading, that allows for loading components on demand, only when user add them to document
 
 ## Introduction
+
 A basic element definition looks like this:
+
+```javascript
+JQX('smart-test', class TestElement extends Smart.BaseElement {
+        // properties.
+        static get properties() {
+            return {
+                'content': {
+                    type: 'string'
+                }
+            };
+        }
+
+        /** Element's template. */
+        template() {
+            return '<div inner-h-t-m-l=\'[[innerHTML]]\'></div>';
+        }
+
+        ready() {
+            super.ready();
+        }
+
+        propertyChangedHandler(propertyName, oldValue, newValue) {
+            super.propertyChangedHandler(propertyName, oldValue, newValue);        
+        }
+    });
+```
+
+An extended element definition looks like this:
 
 ```javascript
 Smart('smart-button', class Button extends Smart.ContentElement {
