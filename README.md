@@ -7,7 +7,22 @@ Smart Custom Element provides a set of useful API, Data Binding, Templates, Devi
 ## Installation
 - `npm install smart-custom-element --save`
 
-In your web page, include `<script src="smart.element.js"></script>`
+In your web page, include
+
+```
+<script src="source/smart.element.js"></script>
+
+```
+
+For IE11, use the ES5 version:
+
+```
+<script src="source-minified/native-shim.js"></script>
+<script src="source-minified/smart.element-polyfills.js"></script>
+<script src="source-minified/smart.element.js"></script>
+
+```
+
 
 Optional polyfill for browsers without custom elements support: `webcomponents-lite.js`
 
