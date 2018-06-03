@@ -19,7 +19,6 @@
     "**/tests"
   ],
   "dependencies": {
-    "webcomponentsjs": "^1.0.0",
-    "smart-core": "HTMLElements/smart-core"
+    "webcomponentsjs": "^1.0.0"
   }
 }
