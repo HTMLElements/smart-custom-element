@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.0.22/webcomponents-lite.js"></script>
+    <script type="text/javascript" src="source/smart.element.js"></script>
+	<script>
+		Smart('smart-test', class TestElement extends Smart.BaseElement {
+			// properties.
+			static get properties() {
+				return {
+					'content': {
+						type: 'string'
+					}
+				};
+			}
+
+			/** Element's template. */
+			template() {
+				return '<div inner-h-t-m-l=\'[[content]]\'></div>';
+			}
+
+			ready() {
+				super.ready();
+			}
+
+			propertyChangedHandler(propertyName, oldValue, newValue) {
+				super.propertyChangedHandler(propertyName, oldValue, newValue);        
+			}
+		});
+	</script>
+	<style>
+		.smart-container {
+			box-sizing: border-box;
+			font-family: inherit;
+			font-size: inherit;
+			display: block;
+			width: 100%;
+			height: 100%;
+			outline: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		.smart-container * {
+			box-sizing: border-box;
+		}	
+		smart-test {
+			background: #ddd;
+			color: #333;
+			display: inline-block;
+			border-radius: 5px;
+			border: 1px solid #aaa;
+			width: 100px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+    <smart-test content="Test Element"></smart-test>
+</body>
+</html>
