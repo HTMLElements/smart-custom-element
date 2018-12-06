@@ -14,27 +14,15 @@ In your web page, include
 
 ```
 
-For IE11, use the ES5 version:
-
-```
-<script src="source-minified/native-shim.js"></script>
-<script src="source-minified/smart.element-polyfills.js"></script>
-<script src="source-minified/smart.element.js"></script>
-
-```
-
-
 Optional polyfill for browsers without custom elements support: `webcomponents-lite.js`
 
-## Working with Transpiled ES5 Files
-When using ES5/minified files, you would also need to include a reference to the file **native-shim.js** (it can be found alongside **smart.element.js** and **smart.element-polyfills.js**).
 
 ## Version and Deployment
 - This package is version according to [semantic versioning](http://semver.org).
 
 ## Browser Support and Compatibility
 
-**[Requires ES2015 classes](https://caniuse.com/es6-class). IE11 and below not supported.**
+**[Requires ES2015 classes](https://caniuse.com/es6-class). Edge, Chrome, Safari and Firefox. Requires Webcomponents polyfill for Edge and Safari**
 
 - **If targeting browsers that natively support ES2015, but not native Web Components:**
 
@@ -203,6 +191,7 @@ Use for one-time set-up before property values are set.
 * attached - Called after the element is attached to the document. Can be called multiple times during the lifetime of an element.
 * ready - Called when the element is ready. Use for one-time configuration of your element. 
 * detached - Called after the element is detached from the document. Can be called multiple times during the lifetime of an element.
+* completed - Called after the element and any custom elements in its template are ready, rendered and attached to the DOM. Completed is called once.
 
 ## Properties
 
@@ -234,15 +223,8 @@ Example:
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="styles/smart.base.css" type="text/css" />
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.1.0/webcomponents-lite.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.1.0/webcomponents-loader.js"></script>
-    <script type="text/javascript" src="smart.element.js"></script>
-    <script type="text/javascript" src="smart.button.js"></script>
-    <script type="text/javascript" src="smart.scrollbar.js"></script>
-    <script type="text/javascript" src="smart.listbox.js"></script>
-    <script type="text/javascript" src="smart.checkbox.js"></script>
-    <script type="text/javascript" src="smart.radiobutton.js"></script>
+    <link rel="stylesheet" href="styles/smart.default.css" type="text/css" />
+    <script type="text/javascript" src="smart.elements.js"></script>
     <script>
         window.onload = function () {
             var list = document.getElementById('list');
@@ -370,9 +352,7 @@ Smart('my-element', class MyElement extends Smart.BaseElement {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="styles/smart.base.css" type="text/css" />
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.1.0/webcomponents-lite.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.1.0/webcomponents-loader.js"></script>
+    <link rel="stylesheet" href="styles/smart.default.css" type="text/css" />
     <script type="text/javascript" src="../../source/smart.element.js"></script>
     <script type="text/javascript" src="../../source/myelement.js"></script>
      <script>
@@ -476,17 +456,17 @@ By invoking `Smart.Utilities.Extend(element)` you can extend any element with th
 In order to add a custom utility class, you can use `Smart.Utilities.Assign(classDefinition)`.
 
 ```javascript
-Smart.Utilities.Assign('BaseNumericProcessor', class BaseNumericProcessor {
+Smart.Utilities.Assign('defaultNumericProcessor', class defaultNumericProcessor {
 }
 ```
 
-To access that class, you can use `Smart.Utilities.BaseNumericProcessor`.
+To access that class, you can use `Smart.Utilities.defaultNumericProcessor`.
 
 ```*if and *items template directives.```
 
 If in the Template's definition, we have a HTMLTemplateElement, we can use these directives to insert HTML.
 
-* *if - Conditionally includes a template based on the value of a property.
+* *if - Conditionally includes a template defaultd on the value of a property.
 * *items - Repeating a template by using each item of an iterable as that template's context.
 * templateAttached - function called when the HTMLTemplateElement is attahed to the DOM.
 * templateDetached - function called when the HTMLTemplateElement is detached from the DOM.
@@ -697,17 +677,8 @@ The following example demonstrates how to use the ```DataContext``` feature.
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.0.22/webcomponents-lite.js"></script>
-    <link rel="stylesheet" href="styles/smart.base.css" type="text/css" />
-    <script type="text/javascript" src="smart.element.js"></script>
-    <script type="text/javascript" src="smart.button.js"></script>
-    <script type="text/javascript" src="smart.scrollbar.js"></script>
-    <script type="text/javascript" src="smart.listbox.js"></script>
-    <script type="text/javascript" src="smart.checkbox.js"></script>
-    <script type="text/javascript" src="smart.radiobutton.js"></script>
-    <script type="text/javascript" src="smart.dropdownlist.js"></script>
-    <script type="text/javascript" src="smart.combobox.js"></script>
-    <script type="text/javascript" src="smart.textbox.js"></script>
+    <link rel="stylesheet" href="styles/smart.default.css" type="text/css" />
+    <script type="text/javascript" src="smart.elements.js"></script>
     <script>
         window.onload = function () {
             const data = [
@@ -821,12 +792,9 @@ Custom Module which adds a new `color` property to the `smart-button` custom ele
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="../../source/styles/smart.base.css" type="text/css" />
+    <link rel="stylesheet" href="../../source/styles/smart.default.css" type="text/css" />
     <link rel="stylesheet" href="../styles/demos.css" type="text/css" />
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.1.0/webcomponents-lite.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.1.0/webcomponents-loader.js"></script>
-    <script type="text/javascript" src="../../source/smart.element.js"></script>
-    <script type="text/javascript" src="../../source/smart.button.js"></script>
+    <script type="text/javascript" src="../../source/smart.elements.js"></script>
     <script>
         class ColorModule  {
              static get properties() {

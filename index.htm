@@ -14,12 +14,27 @@
 				};
 			}
 
+		    static get listeners() {
+				return {
+					'click': '_clickHandler'
+				};
+			}
+
+    
+			/** Changes the check state wneh widget container is clicked. */
+			_clickHandler(event) {
+				const that = this;
+				
+				this.content = "Thanks for clicking me!";
+			}
+	
 			/** Element's template. */
 			template() {
 				return '<div inner-h-t-m-l=\'[[content]]\'></div>';
 			}
 
-			ready() {
+			/** Called when the element is ready. Used for one-time configuration of the Checkbox. */
+    		ready() {
 				super.ready();
 			}
 
@@ -45,17 +60,23 @@
 			box-sizing: border-box;
 		}	
 		smart-test {
-			background: #ddd;
-			color: #333;
+			background: #6200EE;
+			color: #fff;
 			display: inline-block;
 			border-radius: 5px;
-			border: 1px solid #aaa;
-			width: 100px;
+			border: 1px solid #6200EE;
 			text-align: center;
+			cursor: pointer;
+			padding: 5px 10px;
+			transition: all 0.3s;
+		}
+		smart-test:hover {
+			background: #FF0095;
+			border-color: #FF0095;
 		}
 	</style>
 </head>
 <body>
-    <smart-test content="Test Element"></smart-test>
+    <smart-test content="Hello! I am Smart Element. You can click me."></smart-test>
 </body>
 </html>
