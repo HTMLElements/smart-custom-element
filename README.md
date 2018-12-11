@@ -951,7 +951,7 @@ Complex Nested Properties. Smart supports property nesting.
 
 Example: 
 
-`
+```javascript
       'paging': {
                 value: {
                     'enabled': {
@@ -971,21 +971,34 @@ Example:
                 },
                 type: 'object'
             }
-`
+```
 
-For setting `pageSize`, this could be used: grid.paging.pageSize = 15;
+For setting ```pageSize```, this could be used: grid.paging.pageSize = 15;
 
 Initialization of an element from a JSON object with automatic Dependency Changes handling. When an element is created from a JSON object, the json it two-way bound to the element and any change in the element updates the JSON.
+
 HTMLTemplates support. When in the Custom Element's template, we have HTMLTemplateElement, that template is re-evaluated on property change and can be used for dynamic user updates.
+
 Method Arguments and Return Type. Smart validates Methods for Invalid return type, Arguments Count, Arguments Types.
-Agnostic Events - Smart exposes custom events for 'down', 'up', 'move' and 'swipe'. These events are Device agnostic and are raised for Touch and Desktop devices when the Cursor/Pointer is down, up, moved or swiped left, right, up or down.
+
+Agnostic Events - Smart exposes custom events for 'down', 'up', 'move' and 'swipe'. These events are Device agnostic and are raised for 
+
+Touch and Desktop devices when the Cursor/Pointer is down, up, moved or swiped left, right, up or down.
+
 Multiple Element Versions on the same web page is supported.
+
 Localization - Built-in localization support. 
+
 Error Logs - Error logs with different error levels.
+
 `completed` lifecycle callback which is called when the local DOM is ready and all elements are rendered.
+
 `resize` notifications when the element's size is changed.
+
 Style changed notifications - when the element's CSS is changed.
+
 Using Shadow DOM is optional and is user preference. When disabled, the element's local DOM is part of the document's DOM.
+
 View-Model Binding. An Element or Multiple Elements can be bound to the same Model object.
 
 
