@@ -929,4 +929,71 @@ Smart('smart-repeat-button', class RepeatButton extends Smart.Button {
 });
 ```
 
+## Comparison with Polymer Framework
+
+Polymer is a Google-sponsored project. With Polymer, you can build custom elements. Smart Custom Elements can be  compared to Polymer’s custom elements and both provide a very similar development style. 
+
+Similar things:
+
+Elements are instantiated using a constructor or document.createElement. Elements are instantiated when the tag is written in the DOM.
+Configured using attributes or properties
+Populated with internal DOM inside each instance
+Responsive to property and attribute changes
+Styled with internal defaults or externally
+Responsive to methods that manipulate its internal state
+
+Different things:
+
+Property types can be nullable and more strict - validation for Integer. Support for Int64. 
+Properties can define `allowedValues` array. If a property is set to a value which is not in that array, an exception is thrown.
+Property invalid value and invalid type validation.
+Complex Nested Properties. Smart supports property nesting.
+
+Example: 
+
+`
+      'paging': {
+                value: {
+                    'enabled': {
+                        value: false,
+                        type: 'boolean'
+                    },                 
+                    'pageSize': {
+                        value: 10,
+                        type: 'int',
+                        validator: 'pageSizeValidator'
+                    },
+                    'pageIndex': {
+                        value: 0,
+                        type: 'int',
+                        validator: 'pageIndexValidator'
+                    }                    
+                },
+                type: 'object'
+            }
+`
+
+For setting `pageSize`, this could be used: grid.paging.pageSize = 15;
+
+Initialization of an element from a JSON object with automatic Dependency Changes handling. When an element is created from a JSON object, the json it two-way bound to the element and any change in the element updates the JSON.
+HTMLTemplates support. When in the Custom Element's template, we have HTMLTemplateElement, that template is re-evaluated on property change and can be used for dynamic user updates.
+Method Arguments and Return Type. Smart validates Methods for Invalid return type, Arguments Count, Arguments Types.
+Agnostic Events - Smart exposes custom events for 'down', 'up', 'move' and 'swipe'. These events are Device agnostic and are raised for Touch and Desktop devices when the Cursor/Pointer is down, up, moved or swiped left, right, up or down.
+Multiple Element Versions on the same web page is supported.
+Localization - Built-in localization support. 
+Error Logs - Error logs with different error levels.
+`completed` lifecycle callback which is called when the local DOM is ready and all elements are rendered.
+`resize` notifications when the element's size is changed.
+Style changed notifications - when the element's CSS is changed.
+Using Shadow DOM is optional and is user preference. When disabled, the element's local DOM is part of the document's DOM.
+View-Model Binding. An Element or Multiple Elements can be bound to the same Model object.
+
+
+
+
+
+
+
+
+
 
