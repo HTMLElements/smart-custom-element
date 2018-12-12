@@ -1001,6 +1001,18 @@ Using Shadow DOM is optional and is user preference. When disabled, the element'
 
 View-Model Binding. An Element or Multiple Elements can be bound to the same Model object.
 
+## License
+
+See LICENSE.md and Intellectual property and non-compete terms.
+
+### INTELLECTUAL PROPERTY
+
+All intellectual property rights such as but not limited to patents, trademarks, copyrights or trade secret rights related to the Software are property of the Author. You shall not modify, translate, reverse engineer, un-minify, decompile or disassemble the Software or any portion of it or attempt to derive source code or create derivative works. You are not allowed to remove, alter or destroy any proprietary, trademark or copyright markings or notices related to the Software. You must not remove copyright headers, links and markings from any files included in the Software. You must obtain a permission by the Author if you need to incorporate the Software or any portions of it in open source projects. 
+
+### NON-COMPETE
+
+You are not allowed to use any portion of the Software in any products that fully or partially resemble the functionality of the Software or otherwise compete with the Software. You are not allowed to use the Software in any products or solutions offering reusable user interface components to end users, developers and third parties without express written permission by the Author. 
+
 
 
 
