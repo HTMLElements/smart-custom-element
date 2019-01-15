@@ -1,4 +1,4 @@
-# Smart Custom Element [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Get%20over%20170%20free%20design%20blocks%20based%20on%20Bootstrap%204&url=https://www.htmlelements.com/&via=htmlelements&hashtags=bootstrap,design,templates,blocks,developers,webcomponents,customelements,polymer,material)
+# Smart Custom Element [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Get%20over%2020%20free%20custom%20elements%20based%20on%20SmartHTMLElements%204&url=https://www.htmlelements.com/&via=htmlelements&hashtags=bootstrap,design,templates,blocks,developers,webcomponents,customelements,polymer,material)
 
 JavaScript library that wraps the W3C standard Web Components family of APIs to provide a compact, feature-rich interface for `Custom Elements` development.
 
