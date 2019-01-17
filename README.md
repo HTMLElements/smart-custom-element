@@ -1,6 +1,6 @@
 # [Smart Custom Element](https://www.htmlelements.com) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Get%20over%2020%20free%20custom%20elements%20based%20on%20SmartHTMLElements%20&url=https://www.htmlelements.com/&via=htmlelements&hashtags=bootstrap,design,templates,blocks,developers,webcomponents,customelements,polymer,material)
 
-&nbsp;[![Slack](https://smarthtmlelements-slack.herokuapp.com/badge.svg)](https://smarthtmlelements.slack.com/)
+[![Slack](https://smarthtmlelements-slack.herokuapp.com/badge.svg)](https://smarthtmlelements.slack.com/)
 [![Price](https://img.shields.io/badge/price-FREE-0098f7.svg)](https://github.com/HTMLElements/smart-custom-element/blob/master/LICENSE)
 [![npm](https://img.shields.io/npm/v/froala-design-blocks.svg?colorB=brightgreen)](https://www.npmjs.com/package/@smarthtmlelements/smart-custom-element)
 [![GitHub package version](https://img.shields.io/github/package-json/v/HTMLElements/smart-custom-element.svg)](https://github.com/HTMLElements/smart-custom-element)
